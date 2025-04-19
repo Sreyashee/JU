@@ -9,7 +9,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from flask import Flask, render_template
 from flask_cors import CORS
-
+from flask import Flask, jsonify
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
 app = Flask(__name__)
 CORS(app)
 
@@ -95,7 +96,7 @@ def dashboard():
 
     # Return the template with plot data
     # return render_template("dashboard.html", plot_data=plot_data)
-    from flask import jsonify
+    
     return jsonify(plot_data)
 
 if __name__ == "__main__":
