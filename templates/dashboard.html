@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EV Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 30px; }
+        img { width: 80%; max-width: 700px; margin-bottom: 30px; border: 1px solid #ccc; padding: 10px; }
+    </style>
+   
+</head>
+<body>
+    <h1>Electric Vehicle Dashboard</h1>
+
+    {% for plot in plot_data %}
+        <h2>{{ plot.title }}</h2>
+        <img src="{{ plot.image }}" alt="{{ plot.title }}">
+    {% endfor %}
+
+</body>
+</html>
+
